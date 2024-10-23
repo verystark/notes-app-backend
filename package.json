@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
     "build:ui": "rm -rf dist && cd ../part2 && npm run build && cp -r dist ../part3",
-    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push"
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push",
+    "lint": "eslint ."
   },
   "author": "",
   "license": "ISC",
@@ -19,6 +20,11 @@
     "mongoose": "^8.7.1"
   },
   "devDependencies": {
-    "nodemon": "^3.1.7"
+    "@eslint/js": "^9.13.0",
+    "@stylistic/eslint-plugin-js": "^2.9.0",
+    "eslint": "^9.13.0",
+    "globals": "^15.11.0",
+    "nodemon": "^3.1.7",
+    "typescript-eslint": "^8.11.0"
   }
 }
